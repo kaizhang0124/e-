@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ZKNewsListViewController.h"
+#import "ZKWeChatViewController.h"
+#import "ZKLeftMenuViewController.h"
+#import "ZKRightMenuViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,8 +19,49 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[ZKNewsListViewController alloc] init]];
+    ZKLeftMenuViewController *leftMenuViewController = [[ZKLeftMenuViewController alloc] init];
+    ZKLeftMenuViewController *rightMenuViewController = [[ZKLeftMenuViewController alloc] init];
+    
+    RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:navigationController leftMenuViewController:leftMenuViewController rightMenuViewController:rightMenuViewController];
+    
+    sideMenuViewController.backgroundImage = [UIImage imageNamed:@"cover"];
+    sideMenuViewController.menuPreferredStatusBarStyle = 1; // UIStatusBarStyleLightContent
+    sideMenuViewController.delegate = self;
+//    sideMenuViewController.contentViewShadowColor = [UIColor blackColor];
+    sideMenuViewController.contentViewShadowOffset = CGSizeMake(0, 0);
+    sideMenuViewController.contentViewShadowOpacity = 0.6;
+    sideMenuViewController.contentViewShadowRadius = 12;
+    sideMenuViewController.contentViewShadowEnabled = YES;
+    self.window.rootViewController = sideMenuViewController;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    [self setupNav];
+//    [self setupLabel];
     return YES;
+}
+
+- (void)setupLabel{
+    UILabel *label = [UILabel appearance];
+    [label setTintColor:[UIColor clearColor]];
+}
+
+- (void)setupNav{
+    // 设置导航栏外观
+    UINavigationBar *navBar = [UINavigationBar appearance];
+    [navBar setBarTintColor:[UIColor redColor]];
+
+    [navBar setTintColor:[UIColor whiteColor]];
+    [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    navBar.shadowImage=[[UIImage alloc]init];
+    // 设置barButttonItem外观
+    UIBarButtonItem *item=[UIBarButtonItem appearance];
+    [item setTintColor:[UIColor whiteColor]];
+    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
+    UIView *view = [UIView appearance];
+    view.backgroundColor = [UIColor clearColor];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

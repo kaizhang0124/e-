@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  News
+//
+//  Created by tarena on 16/1/7.
+//  Copyright © 2016年 tarena. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "Masonry.h"
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
+#import "MBProgressHUD+KR.h"
+#import "RESideMenu.h"
+#import "FMDatabase.h"
+#import "FMDatabaseQueue.h"
+#import "MJExtension.h"
+#define NEWSLISTURL @"http://c.m.163.com/"
+#define APIKEY @"50e61146092b5474d50fbeb2bb807f7f"
+#define NEWSDETAILURL @"http://apis.baidu.com/showapi_open_bus/channel_news/search_news"
+//定义屏幕的宽-高
+#define ScreenWidth   [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight   [UIScreen mainScreen].bounds.size.height
+//定义颜色的宏
+#define ZKColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define ZKColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+
+// 随机色
+#define  ZKRandomColor XWColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+#endif /* PrefixHeader_pch */
