@@ -26,9 +26,11 @@
 		850BCD571C564061009EA8AA /* ZKDataCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 850BCD561C564061009EA8AA /* ZKDataCacheTool.m */; };
 		85131A681C50EEFB002AA67B /* ZKLeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85131A671C50EEFB002AA67B /* ZKLeftMenuViewController.m */; };
 		85131A6B1C50EF0B002AA67B /* ZKRightMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85131A6A1C50EF0B002AA67B /* ZKRightMenuViewController.m */; };
+		8526533A1C577EED00CC47FB /* Assets 18-15-48-613.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852653391C577EED00CC47FB /* Assets 18-15-48-613.xcassets */; };
+		8526533D1C5782AA00CC47FB /* ZKReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8526533C1C5782AA00CC47FB /* ZKReplyModel.m */; };
+		852653411C57839800CC47FB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 852653401C57839800CC47FB /* Reachability.m */; };
 		8534154F1C3E97FA00F7105E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8534154E1C3E97FA00F7105E /* main.m */; };
 		853415521C3E97FA00F7105E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 853415511C3E97FA00F7105E /* AppDelegate.m */; };
-		8534155A1C3E97FA00F7105E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853415591C3E97FA00F7105E /* Assets.xcassets */; };
 		8534155D1C3E97FA00F7105E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8534155B1C3E97FA00F7105E /* LaunchScreen.storyboard */; };
 		853415921C3EA21B00F7105E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 853415781C3EA21A00F7105E /* Info.plist */; };
 		853415931C3EA21B00F7105E /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8534157A1C3EA21A00F7105E /* MASCompositeConstraint.m */; };
@@ -141,11 +143,15 @@
 		85131A671C50EEFB002AA67B /* ZKLeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLeftMenuViewController.m; sourceTree = "<group>"; };
 		85131A691C50EF0B002AA67B /* ZKRightMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRightMenuViewController.h; sourceTree = "<group>"; };
 		85131A6A1C50EF0B002AA67B /* ZKRightMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRightMenuViewController.m; sourceTree = "<group>"; };
+		852653391C577EED00CC47FB /* Assets 18-15-48-613.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 18-15-48-613.xcassets"; sourceTree = "<group>"; };
+		8526533B1C5782AA00CC47FB /* ZKReplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKReplyModel.h; sourceTree = "<group>"; };
+		8526533C1C5782AA00CC47FB /* ZKReplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKReplyModel.m; sourceTree = "<group>"; };
+		8526533F1C57839800CC47FB /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		852653401C57839800CC47FB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		8534154A1C3E97FA00F7105E /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8534154E1C3E97FA00F7105E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		853415501C3E97FA00F7105E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		853415511C3E97FA00F7105E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		853415591C3E97FA00F7105E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8534155C1C3E97FA00F7105E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8534155E1C3E97FA00F7105E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		853415781C3EA21A00F7105E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -384,6 +390,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8526533E1C57839800CC47FB /* Reachablity */ = {
+			isa = PBXGroup;
+			children = (
+				8526533F1C57839800CC47FB /* Reachability.h */,
+				852653401C57839800CC47FB /* Reachability.m */,
+			);
+			path = Reachablity;
+			sourceTree = "<group>";
+		};
 		853415411C3E97FA00F7105E = {
 			isa = PBXGroup;
 			children = (
@@ -407,9 +422,9 @@
 				853415641C3E99C400F7105E /* Classes */,
 				853415501C3E97FA00F7105E /* AppDelegate.h */,
 				853415511C3E97FA00F7105E /* AppDelegate.m */,
-				853415591C3E97FA00F7105E /* Assets.xcassets */,
 				8534155B1C3E97FA00F7105E /* LaunchScreen.storyboard */,
 				8534155E1C3E97FA00F7105E /* Info.plist */,
+				852653391C577EED00CC47FB /* Assets 18-15-48-613.xcassets */,
 				8534154D1C3E97FA00F7105E /* Supporting Files */,
 			);
 			path = News;
@@ -444,6 +459,7 @@
 		853415761C3EA20C00F7105E /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				8526533E1C57839800CC47FB /* Reachablity */,
 				850BCD421C563FEC009EA8AA /* fmdb */,
 				850BCD031C5636D7009EA8AA /* MJExtension */,
 				85A1265C1C54D08F000C648B /* MJRefresh */,
@@ -765,6 +781,8 @@
 			children = (
 				85CE8AE31C4E62AA0035793C /* ZKNewsDetail.h */,
 				85CE8AE41C4E62AA0035793C /* ZKNewsDetail.m */,
+				8526533B1C5782AA00CC47FB /* ZKReplyModel.h */,
+				8526533C1C5782AA00CC47FB /* ZKReplyModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -836,8 +854,8 @@
 				8534155D1C3E97FA00F7105E /* LaunchScreen.storyboard in Resources */,
 				85C87C3B1C535A690024CBDA /* NewsURLs.plist in Resources */,
 				85A126871C54D137000C648B /* MJRefresh.bundle in Resources */,
-				8534155A1C3E97FA00F7105E /* Assets.xcassets in Resources */,
 				85CE8AED1C4E62AA0035793C /* ZKNewsDetailTableViewCell.xib in Resources */,
+				8526533A1C577EED00CC47FB /* Assets 18-15-48-613.xcassets in Resources */,
 				853415921C3EA21B00F7105E /* Info.plist in Resources */,
 				85A56CEB1C4F9DD000FB8CE4 /* MBProgressHUD.bundle in Resources */,
 			);
@@ -906,6 +924,7 @@
 				8591AE251C40DAB300A06406 /* SDWebImageDownloader.m in Sources */,
 				85A1268D1C54D137000C648B /* UIScrollView+MJRefresh.m in Sources */,
 				85A1268A1C54D137000C648B /* MJRefreshFooterView.m in Sources */,
+				8526533D1C5782AA00CC47FB /* ZKReplyModel.m in Sources */,
 				850BCD151C5636D7009EA8AA /* MJConst.m in Sources */,
 				8591AE211C40DAB300A06406 /* NSData+ImageContentType.m in Sources */,
 				85A56D081C4FAD1700FB8CE4 /* UIViewController+RESideMenu.m in Sources */,
@@ -921,6 +940,7 @@
 				8591AE281C40DAB300A06406 /* SDWebImagePrefetcher.m in Sources */,
 				8591AE2B1C40DAB300A06406 /* UIImage+MultiFormat.m in Sources */,
 				8591AE231C40DAB300A06406 /* SDWebImageCompat.m in Sources */,
+				852653411C57839800CC47FB /* Reachability.m in Sources */,
 				85BCAEBC1C3FD46D00D1C96A /* UIRefreshControl+AFNetworking.m in Sources */,
 				8595E6401C4519BE00D6734F /* ZKNewsDetailViewController.m in Sources */,
 				85BCAEB81C3FD46D00D1C96A /* UIAlertView+AFNetworking.m in Sources */,

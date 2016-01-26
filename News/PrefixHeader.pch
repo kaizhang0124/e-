@@ -20,6 +20,7 @@
 #import "FMDatabase.h"
 #import "FMDatabaseQueue.h"
 #import "MJExtension.h"
+#import "Reachability.h"
 #define NEWSLISTURL @"http://c.m.163.com/"
 #define APIKEY @"50e61146092b5474d50fbeb2bb807f7f"
 #define NEWSDETAILURL @"http://apis.baidu.com/showapi_open_bus/channel_news/search_news"

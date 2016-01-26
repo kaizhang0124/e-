@@ -7,6 +7,7 @@
 //
 
 #import "ZKNewsDetailViewController.h"
+#import "ZKHttpTool.h"
 
 @interface ZKNewsDetailViewController ()<UIWebViewDelegate>
 
@@ -58,8 +59,15 @@
 
 
 - (void)webViewLoadNewsDetail{
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.newsDetailURLStr]];
-    [self.newsWebView loadRequest:request];
+    Reachability *reach=[Reachability reachabilityWithHostName:@"www.baidu.com"];
+    NetworkStatus status=[reach currentReachabilityStatus];
+    if(status==NotReachable){
+        NSLog(@"没有网络");
+        return; //没有网络
+    } else {
+        NSString *url = [NSString stringWithFormat:@"http://c.m.163.com/nc/article/%@/full.html", self.newsModel.docid];
+        
+    }
 }
 
 - (void)setupBackButton{
@@ -69,8 +77,8 @@
     [self.backButton setImage:[UIImage imageNamed:@"icon_back_highlighted"] forState:UIControlStateHighlighted];
     self.backButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(50);
-        make.left.mas_equalTo(40);
+        make.top.mas_equalTo(20);
+        make.left.mas_equalTo(20);
         make.size.mas_equalTo(CGSizeMake(50, 40));
     }];
     [self.backButton addTarget:self action:@selector(backMainController) forControlEvents:UIControlEventTouchUpInside];

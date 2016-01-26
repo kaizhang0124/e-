@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZKNewsModel.h"
 @interface ZKNewsDetailViewController : UIViewController
 
-@property (nonatomic, strong)NSString *newsDetailURLStr;
+@property (nonatomic, strong) ZKNewsModel *newsModel;
 @end
